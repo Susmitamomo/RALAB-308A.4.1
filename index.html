@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat API Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <select id="breed_selector">
+                    <option value="">Select a breed...</option>
+                </select>
+                <div class="breed-info">
+                    <img id="breed_image" src="" alt="Breed Image">
+                    <p id="breed_json"></p>
+                    <a id="wiki_link" href="" target="_blank"></a>
+                </div>
+            </div>
+            <div class="col-lg">
+                <button onclick="showVoteOptions()">Vote</button>
+                <button onclick="showHistoricVotes()">Show Historic Votes</button>
+                <div id="vote-options">
+                    <img id="image-to-vote-on" src="" alt="Vote Image">
+                    <button onclick="vote(1)">Upvote</button>
+                    <button onclick="vote(0)">Neutral</button>
+                    <button onclick="vote(-1)">Downvote</button>
+                </div>
+                <div id="vote-results">
+                    <div id="grid" class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
